@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+.attempts {
+  padding: 10px 0px;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: red;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 15px;
+  background-color: rgb(16, 202, 47);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+  background-color: #ffeb3b;
+}
+
+#restart {
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3679F6;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#restart:hover {
+  background-color: #0b51d1;
+}
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
